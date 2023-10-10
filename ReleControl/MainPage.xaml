@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReleControl.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <!-- Etiqueta para explicar el propósito del botón -->
+            <Label
+                x:Name="LabelText"
+                Text=""
+                HorizontalOptions="Center"
+                FontSize="Medium" />
+
+            <!-- Botón "Conectar" -->
+            <Button
+                x:Name="ConnectBtn"
+                Text="Conectar Dispositivo"
+                Clicked="ScannAndConnect"
+                HorizontalOptions="Center"
+                IsVisible="True" />
+
+            <!-- Indicador de Actividad -->
+            <ActivityIndicator
+                x:Name="activityIndicator"
+                IsRunning="False"
+                IsVisible="False"
+                Color="Blue"
+                HorizontalOptions="Center" />
+
+            <!-- ... (código posterior) ... -->
+
+            <!-- Botón "Encender" / "Apagar" -->
+            <Button
+                x:Name="CounterBtn"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center"
+                Text="Encender / Apagar"
+                BackgroundColor="#008f39"
+                TextColor="White" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
